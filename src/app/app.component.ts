@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Micropráctica 03!';
+  comu: string = '';
+  prov: string = '';
 }
