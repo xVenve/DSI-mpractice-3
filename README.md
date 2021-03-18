@@ -1,27 +1,35 @@
 # Practica03
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.0.
+Utilizando lo visto en clase de práctica/Lab, se pide implementar la siguiente página web utilizando Angular y Custom Components. Como se puede observar, la página permite al usuario seleccionar una opción a partir de un listado de Comunidades Autónomas, así como un listado de Provincias pertenecientes a la Comunidad Autónoma seleccionada. 
 
-## Development server
+Se pide realizar la micropráctica definiendo Custom Elements para los selectores de Comunidad y Provincia; estos Custom Elements tendrán un atributo numérico id que sirve como identificador único. 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Cuando el usuario selecciona una Comunidad Autónoma, el listado de Provincias se actualiza automáticamente. 
 
-## Code scaffolding
+Finalmente, cuando el usuario presiona sobre el botón mostrado al final de la página, se muestra el id de la Comunidad y Provincia actuales. 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Se sugiere la siguiente estructura: 
 
-## Build
+```
+<app-select2 [(values)]="values" (changed)="changed_lists($event)" label1="Comunidad" label2="Provincia">
+<app-option2 id="1" texto="Castilla y León" ></app-option2>
+<app-option2 id="2" texto="Ávila" idPadre="1"></app-option2>
+...
+<app-option2 id="8" texto="Madrid"></app-option2>
+<app-option2 id="9" texto="Madrid" idPadre="8"></app-option2>
+...
+</app-select2>
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Como se puede observar, en este ejemplo se ha definido un elemento custom padre que contiene todas las opciones y pinta los dos selectores utilizando las etiquetas definidas como atributos; el elemento custom hijo define una de las opciones que puede estar incluida dentro de uno de los dos selectores, dependiendo si existe el atributo idPadre o no, i.e. si tiene un parámetro idPadre, es una provincia, de lo contrario es una comunidad autónoma.
 
-## Running unit tests
+## Deploy en GitHub Pages
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+No hace falta crear la rama, se crea sola.
 
-## Running end-to-end tests
+Una vez creado el repositorio con todo en GitHub.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```terminal
+ng add angular-cli-ghpages
+ng deploy --base-href=/<repositoryname>/
+```
