@@ -6,24 +6,30 @@
   </div>
   Definiendo nuestros propios Custom Elements:
   <div>
-    Comunidad:
-    <select [(ngModel)]="comu">
+    <!--Comunidad:
+     <select [(ngModel)]="comu">
       <option><app-comunidad id=1 text="Castilla y León"></app-comunidad></option>
       <option><app-comunidad id=2 text="Madrid"></app-comunidad></option>
+    </select> -->
+
+    <app-comunidad label1="Comunidad" label2="Provincia">
+      <app-provincia id="1" texto="Castilla y León"></app-provincia>
+      <app-provincia id="2" texto="Madrid"></app-provincia>
+      <app-provincia id="3" idPadre=1 texto="Avila"></app-provincia>
+      <app-provincia id="4" texto="Salamanca" idPadre="1"></app-provincia>
+      <app-provincia id="5" texto="Madrid" idPadre="2"></app-provincia>
+    </app-comunidad>
 
 
-    </select>
-
-
-    Provincia:
-    <select [(ngModel)]="prov">
+  <!--  Provincia:
+<select [(ngModel)]="prov" >
       <option><app-comunidad id=3 idPadre=1 text="Avila"></app-comunidad></option>
       <option><app-comunidad id=4 text="Salamanca" idPadre=1></app-comunidad></option>
       <option><app-comunidad id=5 text="Madrid" idPadre=2></app-comunidad></option>
 
     </select>
 
-  </div>
+  </div> -->
   Comunidad: {{comu}} <br>
   Provincia: {{prov}} <br>
   <button type="button">Get propiedades del CustomElement</button>

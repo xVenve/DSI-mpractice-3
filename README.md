@@ -1,16 +1,16 @@
 # Practica03
 
-Utilizando lo visto en clase de práctica/Lab, se pide implementar la siguiente página web utilizando Angular y Custom Components. Como se puede observar, la página permite al usuario seleccionar una opción a partir de un listado de Comunidades Autónomas, así como un listado de Provincias pertenecientes a la Comunidad Autónoma seleccionada. 
+Utilizando lo visto en clase de práctica/Lab, se pide implementar la siguiente página web utilizando Angular y Custom Components. Como se puede observar, la página permite al usuario seleccionar una opción a partir de un listado de Comunidades Autónomas, así como un listado de Provincias pertenecientes a la Comunidad Autónoma seleccionada.
 
-Se pide realizar la micropráctica definiendo Custom Elements para los selectores de Comunidad y Provincia; estos Custom Elements tendrán un atributo numérico id que sirve como identificador único. 
+Se pide realizar la micropráctica definiendo Custom Elements para los selectores de Comunidad y Provincia; estos Custom Elements tendrán un atributo numérico id que sirve como identificador único.
 
-Cuando el usuario selecciona una Comunidad Autónoma, el listado de Provincias se actualiza automáticamente. 
+Cuando el usuario selecciona una Comunidad Autónoma, el listado de Provincias se actualiza automáticamente.
 
-Finalmente, cuando el usuario presiona sobre el botón mostrado al final de la página, se muestra el id de la Comunidad y Provincia actuales. 
+Finalmente, cuando el usuario presiona sobre el botón mostrado al final de la página, se muestra el id de la Comunidad y Provincia actuales.
 
-Se sugiere la siguiente estructura: 
+Se sugiere la siguiente estructura:
 
-```
+```Angular
 <app-select2 [(values)]="values" (changed)="changed_lists($event)" label1="Comunidad" label2="Provincia">
 <app-option2 id="1" texto="Castilla y León" ></app-option2>
 <app-option2 id="2" texto="Ávila" idPadre="1"></app-option2>

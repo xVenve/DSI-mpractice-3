@@ -1,21 +1,24 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, QueryList, ContentChildren } from '@angular/core';
 
+import { ProvinciaComponent } from '../provincia/provincia.component';
 @Component({
   selector: 'app-comunidad',
   templateUrl: './comunidad.component.html',
   styleUrls: ['./comunidad.component.scss'],
 })
 export class ComunidadComponent implements OnInit {
-  @Input() id: string;
-  @Input() idPadre: string;
+  @Input() label1: string;
+  @Input() label2: string;
 
-  @Input() text: string;
+  @ContentChildren(ProvinciaComponent)
+  public elements!: QueryList<ProvinciaComponent>;
 
   constructor() {
-    this.id = '';
-    this.idPadre = '';
-    this.text = '';
+    this.label1 = '';
+    this.label2 = '';
   }
 
   ngOnInit() {}
+
+
 }
