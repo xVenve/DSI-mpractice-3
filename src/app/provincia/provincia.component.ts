@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Inject,Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-provincia',
@@ -9,11 +9,12 @@ export class ProvinciaComponent implements OnInit {
   @Input() id: string;
   @Input() texto: string;
   @Input() idPadre: string;
-  constructor() {
-    this.id = '';
-    this.texto = '';
-    this.idPadre = '';
-  }
+  
+  constructor(id:string, texto:string, idPadre:string) {
+    this.id = id;
+    this.texto = texto;
+    this.idPadre = idPadre;
+  };
 
-  ngOnInit(): void {}
+  ngOnInit() :void {}
 }
