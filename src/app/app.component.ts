@@ -7,6 +7,19 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Micropráctica 03!';
-  comu: string = '';
-  prov: string = '';
+  comuLocal: string = '';
+  provLocal: string = '';
+
+  comuC: string = '';
+  provC: string = '';
+
+  selectChanged(data: { com: string; pro: string }) {
+    this.comuC = data.com;
+    this.provC = data.pro;
+  }
+
+  updateCustomElements() {
+    this.comuLocal = this.comuC;
+    this.provLocal = this.provC;
+  }
 }

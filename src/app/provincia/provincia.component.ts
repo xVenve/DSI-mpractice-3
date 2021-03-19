@@ -7,11 +7,12 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ProvinciaComponent implements OnInit {
   @Input() id: string;
-  @Input() texto: string;
+  @Input() name: string;
   @Input() idPadre: string;
+
   constructor() {
     this.id = '';
-    this.texto = '';
+    this.name = '';
     this.idPadre = '';
   }
 
