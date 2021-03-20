@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component  } from '@angular/core';
+import { ComunidadComponent } from './comunidad/comunidad.component';
+import { ProvinciaComponent } from './provincia/provincia.component';
 
 @Component({
   selector: 'app-root',

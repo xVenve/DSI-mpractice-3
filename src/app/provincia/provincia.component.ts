@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Inject,Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-provincia',
@@ -16,5 +16,5 @@ export class ProvinciaComponent implements OnInit {
     this.idPadre = '';
   }
 
-  ngOnInit(): void {}
+  ngOnInit() :void {}
 }
