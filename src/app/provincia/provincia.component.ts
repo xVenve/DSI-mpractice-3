@@ -7,14 +7,14 @@ import { Component, Inject,Input, OnInit } from '@angular/core';
 })
 export class ProvinciaComponent implements OnInit {
   @Input() id: string;
-  @Input() texto: string;
+  @Input() name: string;
   @Input() idPadre: string;
-  
-  constructor(id:string, texto:string, idPadre:string) {
-    this.id = id;
-    this.texto = texto;
-    this.idPadre = idPadre;
-  };
+
+  constructor() {
+    this.id = '';
+    this.name = '';
+    this.idPadre = '';
+  }
 
   ngOnInit() :void {}
 }

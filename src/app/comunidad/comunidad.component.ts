@@ -7,14 +7,12 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ComunidadComponent implements OnInit {
   @Input() id: string;
-  @Input() texto: string;
+  @Input() name: string;
 
-  constructor(id:string, texto:string) {
-    this.id = id
-    this.texto = texto;
-  };
-
+  constructor() {
+    this.id = '';
+    this.name = '';
+  }
 
   ngOnInit() {}
-
 }

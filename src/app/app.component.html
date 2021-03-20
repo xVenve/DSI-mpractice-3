@@ -6,31 +6,92 @@
   </div>
   Definiendo nuestros propios Custom Elements:
   <div>
-    Comunidad:
-     <select [(ngModel)]="comu">
-       <option></option>
-      <app-comunidad id=1 texto="Castilla y León"></app-comunidad>
-      <app-comunidad id=2 texto="Madrid"></app-comunidad>
-    </select>
-    {{comu.id}}
-    <!--     <app-comunidad label1="Comunidad" label2="Provincia">
-      <app-provincia id="1" texto="Castilla y León"></app-provincia>
-      <app-provincia id="2" texto="Madrid"></app-provincia>
-      <app-provincia id="3" idPadre=1 texto="Avila"></app-provincia>
-      <app-provincia id="4" texto="Salamanca" idPadre="1"></app-provincia>
-      <app-provincia id="5" texto="Madrid" idPadre="2"></app-provincia
-    </app-comunidad> -->
+
+    <app-select label1="Comunidad" label2="Provincia" (sendUpdate)="selectChanged($event)">
+      <app-comunidad id="1" name="Andalucia"></app-comunidad>
+      <app-comunidad id="2" name="Aragón"></app-comunidad>
+      <app-comunidad id="3" name="Asturias"></app-comunidad>
+      <app-comunidad id="4" name="Islas Baleares	"></app-comunidad>
+      <app-comunidad id="5" name="Islas Canarias"></app-comunidad>
+      <app-comunidad id="6" name="Cantabria"></app-comunidad>
+      <app-comunidad id="7" name="Castilla La Mancha"></app-comunidad>
+      <app-comunidad id="8" name="Castilla y León"></app-comunidad>
+      <app-comunidad id="9" name="Cataluña"></app-comunidad>
+      <app-comunidad id="10" name="Extremadura"></app-comunidad>
+      <app-comunidad id="11" name="Galicia"></app-comunidad>
+      <app-comunidad id="12" name="La Rioja"></app-comunidad>
+      <app-comunidad id="13" name="Comunidad de Madrid"></app-comunidad>
+      <app-comunidad id="14" name="Navarra"></app-comunidad>
+      <app-comunidad id="15" name="País Vasco"></app-comunidad>
+      <app-comunidad id="16" name="Región de Murcia"></app-comunidad>
+      <app-comunidad id="17" name="Comunidad Valenciana"></app-comunidad>
 
 
-    Provincia:
-    <select [(ngModel)]="prov" >
-      <option><app-provincia id=3 text="Avila" idPadre=1></app-provincia></option>
-      <option><app-provincia id=4 texto="Salamanca" idPadre=1></app-provincia></option>
-      <option><app-provincia id=5 texto="Madrid" idPadre=2></app-provincia></option>
-    </select>
+      <app-provincia id="18" name="Almería" idPadre="1"></app-provincia>
+      <app-provincia id="19" name="Granada" idPadre="1"></app-provincia>
+      <app-provincia id="20" name="Córdoba" idPadre="1"></app-provincia>
+      <app-provincia id="21" name="Jaén" idPadre="1"></app-provincia>
+      <app-provincia id="22" name="Sevilla" idPadre="1"></app-provincia>
+      <app-provincia id="23" name="Málaga" idPadre="1"></app-provincia>
+      <app-provincia id="24" name="Cádiz" idPadre="1"></app-provincia>
+      <app-provincia id="25" name="Huelva" idPadre="1"></app-provincia>
+      <app-provincia id="26" name="Huesca" idPadre="2"></app-provincia>
+      <app-provincia id="27" name="Zaragoza" idPadre="2"></app-provincia>
+      <app-provincia id="28" name="Asturias" idPadre="3"></app-provincia>
+      <app-provincia id="29" name="Menorca" idPadre="4"></app-provincia>
+      <app-provincia id="30" name="Mallorca" idPadre="4"></app-provincia>
+      <app-provincia id="31" name="Ibiza" idPadre="4"></app-provincia>
+      <app-provincia id="32" name="Formentera" idPadre="4"></app-provincia>
+      <app-provincia id="33" name="Cabrera" idPadre="4"></app-provincia>
+      <app-provincia id="34" name="El Hierro" idPadre="5"></app-provincia>
+      <app-provincia id="35" name="La Palma" idPadre="5"></app-provincia>
+      <app-provincia id="36" name="La Gomera" idPadre="5"></app-provincia>
+      <app-provincia id="37" name="Tenerife" idPadre="5"></app-provincia>
+      <app-provincia id="38" name="Gran Canaria" idPadre="5"></app-provincia>
+      <app-provincia id="39" name="Fuerteventura" idPadre="5"></app-provincia>
+      <app-provincia id="40" name="Lanzarote" idPadre="5"></app-provincia>
+      <app-provincia id="41" name="La Graciosa" idPadre="5"></app-provincia>
+      <app-provincia id="42" name="Santander" idPadre="6"></app-provincia>
+      <app-provincia id="43" name="Toledo" idPadre="7"></app-provincia>
+      <app-provincia id="44" name="Ciudad Real" idPadre="7"></app-provincia>
+      <app-provincia id="45" name="Cuenca" idPadre="7"></app-provincia>
+      <app-provincia id="46" name="Guadalajara" idPadre="7"></app-provincia>
+      <app-provincia id="47" name="Albacete" idPadre="7"></app-provincia>
+      <app-provincia id="48" name="León" idPadre="8"></app-provincia>
+      <app-provincia id="49" name="Palencia" idPadre="8"></app-provincia>
+      <app-provincia id="50" name="Salamanca" idPadre="8"></app-provincia>
+      <app-provincia id="51" name="Burgos" idPadre="8"></app-provincia>
+      <app-provincia id="52" name="Zamora" idPadre="8"></app-provincia>
+      <app-provincia id="53" name="Valladolid" idPadre="8"></app-provincia>
+      <app-provincia id="54" name="Soria" idPadre="8"></app-provincia>
+      <app-provincia id="55" name="Segovia" idPadre="8"></app-provincia>
+      <app-provincia id="56" name="Ávila" idPadre="8"></app-provincia>
+      <app-provincia id="57" name="Barcelona" idPadre="9"></app-provincia>
+      <app-provincia id="58" name="Tarragona" idPadre="9"></app-provincia>
+      <app-provincia id="59" name="Lérida" idPadre="9"></app-provincia>
+      <app-provincia id="60" name="Gerona" idPadre="9"></app-provincia>
+      <app-provincia id="61" name="Cáceres" idPadre="10"></app-provincia>
+      <app-provincia id="62" name="Badajoz" idPadre="10"></app-provincia>
+      <app-provincia id="63" name="La Coruña" idPadre="11"></app-provincia>
+      <app-provincia id="64" name="Lugo" idPadre="11"></app-provincia>
+      <app-provincia id="65" name="Orense" idPadre="11"></app-provincia>
+      <app-provincia id="66" name="Pontevedra" idPadre="11"></app-provincia>
+      <app-provincia id="67" name="La Rioja" idPadre="12"></app-provincia>
+      <app-provincia id="68" name="Madrid" idPadre="13"></app-provincia>
+      <app-provincia id="69" name="Navarra" idPadre="14"></app-provincia>
+      <app-provincia id="70" name="Lugo" idPadre="15"></app-provincia>
+      <app-provincia id="71" name="Guipúzcoa" idPadre="15"></app-provincia>
+      <app-provincia id="72" name="Vizcaya " idPadre="15"></app-provincia>
+      <app-provincia id="73" name="Murcia " idPadre="16"></app-provincia>
+      <app-provincia id="74" name="Castellón " idPadre="17"></app-provincia>
+      <app-provincia id="75" name="Valencia  " idPadre="17"></app-provincia>
+      <app-provincia id="76" name="Alicante " idPadre="17"></app-provincia>
+
+    </app-select>
+
+    Comunidad: {{comuLocal}} <br>
+    Provincia: {{provLocal}} <br>
+
+    <button type="button" (click)="updateCustomElements()">Get propiedades del CustomElement</button>
 
   </div>
-  Comunidad: {{comu.id}} <br>
-  Provincia: {{prov}} <br>
-  <button type="button">Get propiedades del CustomElement</button>
-</div>
