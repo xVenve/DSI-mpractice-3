@@ -1,33 +1,33 @@
-# Practica03
+# DSI Practice 3
 
-Utilizando lo visto en clase de práctica/Lab, se pide implementar la siguiente página web utilizando Angular y Custom Components. Como se puede observar, la página permite al usuario seleccionar una opción a partir de un listado de Comunidades Autónomas, así como un listado de Provincias pertenecientes a la Comunidad Autónoma seleccionada.
+Using what we have seen in practice/Lab class, we are asked to implement the following web page using Angular and Custom Components. As can be seen, the page allows the user to select an option from a list of Autonomous Communities, as well as a list of Provinces belonging to the selected Autonomous Community.
 
-Se pide realizar la micropráctica definiendo Custom Elements para los selectores de Comunidad y Provincia; estos Custom Elements tendrán un atributo numérico id que sirve como identificador único.
+The micro-practice is requested by defining Custom Elements for the Community and Province selectors; these Custom Elements will have a numeric attribute id that serves as a unique identifier.
 
-Cuando el usuario selecciona una Comunidad Autónoma, el listado de Provincias se actualiza automáticamente.
+When the user selects an Autonomous Community, the list of Provinces is automatically updated.
 
-Finalmente, cuando el usuario presiona sobre el botón mostrado al final de la página, se muestra el id de la Comunidad y Provincia actuales.
+Finally, when the user clicks on the button shown at the bottom of the page, the id of the current Community and Province is displayed.
 
-Se sugiere la siguiente estructura:
+The following structure is suggested:
 
 ```Angular
-<app-select2 [(values)]="values" (changed)="changed_lists($event)" label1="Comunidad" label2="Provincia">
-<app-option2 id="1" texto="Castilla y León" ></app-option2>
-<app-option2 id="2" texto="Ávila" idPadre="1"></app-option2>
+<app-select2 [(values)]="values" (changed)="changed_lists($event)" label1="Community" label2="Province">
+<app-option2 id="1" text="Castilla y León" ></app-option2>
+<app-option2 id="2" text="Ávila" idParent="1"></app-option2>
 ...
-<app-option2 id="8" texto="Madrid"></app-option2>
-<app-option2 id="9" texto="Madrid" idPadre="8"></app-option2>
+<app-option2 id="8" text="Madrid"></app-option2>
+<app-option2 id="9" text="Madrid" idParent="8"></app-option2>
 ...
 </app-select2>
 ```
 
-Como se puede observar, en este ejemplo se ha definido un elemento custom padre que contiene todas las opciones y pinta los dos selectores utilizando las etiquetas definidas como atributos; el elemento custom hijo define una de las opciones que puede estar incluida dentro de uno de los dos selectores, dependiendo si existe el atributo idPadre o no, i.e. si tiene un parámetro idPadre, es una provincia, de lo contrario es una comunidad autónoma.
+As you can see, in this example we have defined a parent custom element that contains all the options and paints the two selectors using the tags defined as attributes; the child custom element defines one of the options that can be included inside one of the two selectors, depending if the idParent attribute exists or not, i.e. if it has an idParent parameter, it is a province, otherwise it is an autonomous community.
 
-## Deploy en GitHub Pages
+## Deploy in GitHub Pages
 
-No hace falta crear la rama, se crea sola.
+There is no need to create the branch, it creates itself.
 
-Una vez creado el repositorio con todo en GitHub.
+Once the repository is created with everything in GitHub.
 
 ```terminal
 ng add angular-cli-ghpages

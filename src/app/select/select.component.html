@@ -7,7 +7,7 @@
   {{label2}}:
   <select [(ngModel)]="prov" (change)="updateCustomElements()">
     <ng-container *ngFor="let p of provincias">
-      <option value={{p.id}} *ngIf="comu==p.idPadre">{{p.name}}</option>
+      <option value={{p.id}} *ngIf="comu==p.idFather">{{p.name}}</option>
     </ng-container>
   </select> <br>
 </div>

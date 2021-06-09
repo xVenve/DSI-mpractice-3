@@ -8,7 +8,7 @@ import { ProvinciaComponent } from './provincia/provincia.component';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'Micropráctica 03!';
+  title = 'DSI Practice 3';
   comuLocal: string = '';
   provLocal: string = '';
 
