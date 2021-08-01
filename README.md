@@ -1,4 +1,4 @@
-# DSI Practice 3
+# DSI Practice 3 ![W3C Validation](https://img.shields.io/w3c-validation/html?preset=HTML%2C%20SVG%201.1%2C%20MathML%203.0&targetUrl=https%3A%2F%2Fxvenve.github.io%2FDSI-mpractice-3%2F) ![GitHub top language](https://img.shields.io/github/languages/top/xVenve/DSI-mpractice-3) ![GitHub repo size](https://img.shields.io/github/repo-size/xVenve/DSI-mpractice-3)
 
 Using what we have seen in practice/Lab class, we are asked to implement the following web page using Angular and Custom Components. As can be seen, the page allows the user to select an option from a list of Autonomous Communities, as well as a list of Provinces belonging to the selected Autonomous Community.
 
